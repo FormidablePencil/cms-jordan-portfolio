@@ -19,8 +19,8 @@ function ContentSection() {
   const newAdditionOnClick = (props) => dispatch({ type: NEW_ADDITION_TO_CMS_CONTENT, payload: props })
   return (
     <>
-      {/* //*========= Images Section ===========*/}
-      <CustomCmsTextField
+     {/* //*========= Technologies Section ===========*/}
+     <CustomCmsTextField
         textfieldValue={cmsPortfolioContent.tabSectionTitles[2].subSections[0].tabTitle}
         placeholder={''}
         indexInArray={2}
@@ -30,48 +30,6 @@ function ContentSection() {
       />
       <Grid item>
         <Captions input1='Tech icon URL' input2='Name of tech' />
-        {cmsPortfolioContent.moreTech.map((tec, index) =>
-          <div key={index}>
-            <SectionWrapper
-              type={types.moreTech}
-              index={index}
-              deleteBtnVisible={cmsPortfolioContent[types.moreTech].length > 1}
-            >
-              <CmsTextFields
-                arrOfTextFields={[
-                  {
-                    textfieldValue: tec.icon,
-                    placeholder: 'Tech icon URL',
-                    indexInArray: 'icon'
-                  },
-                  {
-                    textfieldValue: tec.alt,
-                    placeholder: 'Name of tech',
-                    indexInArray: 'alt'
-                  }
-                ]}
-                index={index}
-                type={types.moreTech}
-              />
-            </SectionWrapper>
-            {index === cmsPortfolioContent.moreTech.length - 1 &&
-              <Button onClick={() => newAdditionOnClick(types.moreTech)}><AddIcon /></Button>}
-          </div>
-        )
-        }
-      </Grid >
-
-      {/* //*========= Videos Section ===========*/}
-      <CustomCmsTextField
-        textfieldValue={cmsPortfolioContent.tabSectionTitles[2].subSections[1].tabTitle}
-        placeholder={''}
-        indexInArray={2}
-        deeperIndexInArray={1}
-        type='tabSectionTitles'
-        index={null}
-      />
-      <Grid item>
-        <Captions input1='Image URL' input2='Title' />
         {cmsPortfolioContent.photoshop.map((image, index) =>
           <div key={index}>
             <SectionWrapper
@@ -83,12 +41,12 @@ function ContentSection() {
                 arrOfTextFields={[
                   {
                     textfieldValue: image.url,
-                    placeholder: 'Image URL',
+                    placeholder: 'Tech icon URL',
                     indexInArray: 'url'
                   },
                   {
                     textfieldValue: image.alt,
-                    placeholder: 'Title',
+                    placeholder: 'Name of tech',
                     indexInArray: 'alt'
                   }
                 ]}
@@ -101,18 +59,18 @@ function ContentSection() {
           </div>
         )}
       </Grid>
-
-      {/* //*========= Technologies Section ===========*/}
+      
+      {/* //*========= Videos Section ===========*/}
       <CustomCmsTextField
-        textfieldValue={cmsPortfolioContent.tabSectionTitles[2].subSections[2].tabTitle}
+        textfieldValue={cmsPortfolioContent.tabSectionTitles[2].subSections[1].tabTitle}
         placeholder={''}
         indexInArray={2}
-        deeperIndexInArray={2}
+        deeperIndexInArray={1}
         type='tabSectionTitles'
         index={null}
       />
       <Grid item>
-        <Captions input1='Tech icon URL' input2='Title' />
+        <Captions input1='Image URL' input2='Title' />
         {cmsPortfolioContent.videoProjects.map((image, index) =>
           <div key={index}>
             <SectionWrapper
@@ -124,7 +82,7 @@ function ContentSection() {
                 arrOfTextFields={[
                   {
                     textfieldValue: image.url,
-                    placeholder: 'Tech icon URL',
+                    placeholder: 'Image URL',
                     indexInArray: 'url'
                   },
                   {
@@ -143,6 +101,50 @@ function ContentSection() {
         )}
       </Grid>
 
+     
+      {/* //*========= Images Section ===========*/}
+      <CustomCmsTextField
+        textfieldValue={cmsPortfolioContent.tabSectionTitles[2].subSections[2].tabTitle}
+        placeholder={''}
+        indexInArray={2}
+        deeperIndexInArray={2}
+        type='tabSectionTitles'
+        index={null}
+      />
+      <Grid item>
+        <Captions input1='Tech icon URL' input2='Title' />
+        {cmsPortfolioContent.moreTech.map((tec, index) =>
+          <div key={index}>
+            <SectionWrapper
+              type={types.moreTech}
+              index={index}
+              deleteBtnVisible={cmsPortfolioContent[types.moreTech].length > 1}
+            >
+              <CmsTextFields
+                arrOfTextFields={[
+                  {
+                    textfieldValue: tec.icon,
+                    placeholder: 'Tech icon URL',
+                    indexInArray: 'icon'
+                  },
+                  {
+                    textfieldValue: tec.alt,
+                    placeholder: 'Title',
+                    indexInArray: 'alt'
+                  }
+                ]}
+                index={index}
+                type={types.moreTech}
+              />
+            </SectionWrapper>
+            {index === cmsPortfolioContent.moreTech.length - 1 &&
+              <Button onClick={() => newAdditionOnClick(types.moreTech)}><AddIcon /></Button>}
+          </div>
+        )
+        }
+      </Grid>
+
+      
     </>
   )
 }
