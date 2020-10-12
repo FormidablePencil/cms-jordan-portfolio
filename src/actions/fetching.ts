@@ -1,6 +1,6 @@
 //~ fetching to server
 export const fetchContentData = async (credentials) => {
-  const res = await fetch('http://localhost:8080/contentdatalogin',
+  const res = await fetch('https://jordan-portfolio-server.herokuapp.com/contentdatalogin',
     {
       method: 'POST',
       headers: {
@@ -14,7 +14,7 @@ export const fetchContentData = async (credentials) => {
 }
 
 export const updateContent = async (data, credentials) => {
-  const res = await fetch('http://localhost:8080/updatecontent',
+  const res = await fetch('https://jordan-portfolio-server.herokuapp.com/updatecontent',
     {
       method: 'POST',
       headers: {
