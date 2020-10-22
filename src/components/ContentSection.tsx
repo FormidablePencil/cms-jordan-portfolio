@@ -5,8 +5,9 @@ import SectionWrapper from './SectionWrapper';
 import CmsTextFields, { CustomCmsTextField } from './CmsTextFields';
 import { Captions } from '../Cms';
 import { useDispatch, useSelector } from 'react-redux';
-import { NEW_ADDITION_TO_CMS_CONTENT } from '../actions/constants'
+// import { NEW_ADDITION_TO_CMS_CONTENT } from '../actions/constants'
 import { rootT } from '../store';
+import { NEW_ADDITION_TO_CMS_CONTENT } from '../actions/constants';
 
 function ContentSection() {
   const types = {

@@ -48,6 +48,6 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     right: 25,
     width: 300,
-    top: 30,
+    top: 108,
   },
 }));
