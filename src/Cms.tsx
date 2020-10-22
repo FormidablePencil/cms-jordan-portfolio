@@ -124,18 +124,6 @@ function Cms() {
         </div>
 
         {/* //*========= Flaoting Fab Btn ===========*/}
-        <Grid item>
-          <Button className={
-            portfolioDataChanged === 'err' ? classes.saveContentBtnErr
-              : portfolioDataChanged ? classes.saveContentBtn
-                : classes.saveContentBtnStandby
-          }
-            variant='contained'
-            onClick={() => onClickSubmit()}
-          >
-            {portfolioDataChanged === 'err' ? '!' : portfolioDataChanged ? 'Save' : 'Saved'}
-          </Button>
-        </Grid>
 
       </Grid>
     </Container >
