@@ -1,9 +1,12 @@
-import { CrystalParallax, CrystalGallery } from 'parallax-effect'
-import { parallaxDefaults } from './constants/parallaxCrystalProps';
+import { CrystalParallax, CrystalGallery } from 'parallax-effect-crystals'
+import crystalParallaxDefault from './constants/parallaxCrystalProps';
 import React from 'react'
 import Cms from './Cms'
 import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from './layouts/Navbar';
+import FabSave from './components/FabSave';
+import { useDispatch } from 'react-redux';
+import { READY_TO_SAVE } from './actions/constants';
 
 export enum paths {
   cms = '/',
@@ -11,7 +14,13 @@ export enum paths {
   crystalsGallery = '/crystals-gallery',
 }
 
+
 function Routes() {
+  const dispatch = useDispatch()
+
+  const crystalPropsChanged = () =>
+    dispatch({ type: READY_TO_SAVE, payload: true })
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -23,7 +32,8 @@ function Routes() {
       <Route exact path={paths.parallaxCanvas}>
         <CrystalParallax
           withGui={true}
-          pulledRawCrystalData={parallaxDefaults}
+          onChange={crystalPropsChanged}
+          pulledRawCrystalData={crystalParallaxDefault}
         />
       </Route>
 

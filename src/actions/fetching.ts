@@ -1,6 +1,7 @@
 //~ fetching to server
 export const fetchContentData = async (credentials) => {
   const res = await fetch('https://jordan-portfolio-server.herokuapp.com/contentdatalogin',
+
     {
       method: 'POST',
       headers: {
@@ -13,14 +14,14 @@ export const fetchContentData = async (credentials) => {
     return await res.json() //update content state
 }
 
-export const updateContent = async (data, credentials) => {
+export const updateContent = async (cmsPortfolioContent, rawCrytal, credentials) => {
   const res = await fetch('https://jordan-portfolio-server.herokuapp.com/updatecontent',
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ data, credentials })
+      body: JSON.stringify({ data: { cmsPortfolioContent, rawCrytal }, credentials })
     })
   if (res.status === 200)
     return true

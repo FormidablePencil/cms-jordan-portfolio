@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Grid, Typography, makeStyles, Button, Container, TextareaAutosize } from '@material-ui/core'
-import { updateContent } from './actions/fetching';
+import React, { useState } from 'react'
+import { Grid, Typography, makeStyles, Container, TextareaAutosize } from '@material-ui/core'
 import Login from './components/Login';
 import { GridFlex } from './styles/customMaterialUiComp';
 import ContentSection from './components/ContentSection';
@@ -26,10 +25,8 @@ export const Captions = ({ input1, input2, input3 }: { input1, input2, input3?: 
 }
 
 function Cms() {
-  const [, setIsLoggedIn] = useState(false)
-  const [controlledAuth, setControlledAuth] = useState({ username: '', password: '' })
-  const [portfolioDataChanged, setPortfolioDataChanged] = useState<boolean | 'err'>(false)
-  const { cmsPortfolioContent } = useSelector((state: rootT) => state)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const { cmsPortfolioContent, controlledAuth } = useSelector((state: rootT) => state)
   const classes = useStyles();
   const dispatch = useDispatch()
 
@@ -43,23 +40,9 @@ function Cms() {
     }
   })
 
-  const renderCount = useRef(0)
-  useEffect(() => {
-    if (renderCount.current === 1) //when page loads the state won't be toggled
-      setPortfolioDataChanged(true)
-    else renderCount.current = 1
-  }, [cmsPortfolioContent, setPortfolioDataChanged])
 
 
   const loggedIn = (boolean) => setIsLoggedIn(boolean)
-  const onClickSubmit = async () => {
-    const updated = await updateContent(cmsPortfolioContent, controlledAuth)
-    if (updated)
-      setPortfolioDataChanged(false)
-    else
-      setPortfolioDataChanged('err')
-  }
-
 
   return (
     <Container>
@@ -67,9 +50,9 @@ function Cms() {
 
         {/* //*========= Authentication ===========*/}
         <Login
+          isLoggedIn={isLoggedIn}
           loggedIn={loggedIn}
           controlledAuth={controlledAuth}
-          setControlledAuth={setControlledAuth}
         />
 
         {/* //*========= Intro Section ===========*/}
@@ -140,24 +123,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2em',
     padding: '.2em'
   },
-  saveContentBtn: {
-    backgroundColor: 'green',
-    position: "fixed",
-    bottom: '1em',
-    right: '1em',
-  },
-  saveContentBtnStandby: {
-    backgroundColor: 'grey',
-    position: "fixed",
-    bottom: '1em',
-    right: '1em',
-  },
-  saveContentBtnErr: {
-    backgroundColor: 'yellow',
-    position: "fixed",
-    bottom: '1em',
-    right: '1em',
-  },
+
   caption: {
     color: '#1182B0'
   },

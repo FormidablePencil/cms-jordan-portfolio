@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Grid, Input, Button, makeStyles } from '@material-ui/core';
 import { fetchContentData } from '../actions/fetching';
 import { useDispatch } from 'react-redux';
-import { FETCHED_CMS_PORTFOLIO_DATA } from '../actions/constants';
+import { FETCHED_CMS_PORTFOLIO_DATA, UPDATE_AUTH_PASSWORD, UPDATE_AUTH_USERNAME } from '../actions/constants';
 
-const Login = ({ loggedIn, controlledAuth, setControlledAuth }) => {
+const Login = ({ isLoggedIn, loggedIn, controlledAuth }) => {
   const classes = useStyles();
   const dispatch = useDispatch()
   // eslint-disable-next-line 
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   const onClickSubmit = async () => {
     const fetchedContent = await fetchContentData(controlledAuth)
@@ -17,20 +16,25 @@ const Login = ({ loggedIn, controlledAuth, setControlledAuth }) => {
         dispatch({ type: FETCHED_CMS_PORTFOLIO_DATA, payload: fetchedContent.data })
   }
 
+  const onChangeUsername = (e) =>
+    dispatch({ type: UPDATE_AUTH_USERNAME, payload: e.target.value })
+
+  const onChangePassword = (e) =>
+    dispatch({ type: UPDATE_AUTH_PASSWORD, payload: e.target.value })
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isLoggedIn) {
       loggedIn(true)
     }
-  }, [isAuthenticated, loggedIn, controlledAuth])
+  }, [isLoggedIn, loggedIn, controlledAuth])
 
   return (
     <Grid container spacing={3} className={classes.loginSection}>
       <Grid item>
         <Input value={controlledAuth.username} placeholder='username'
-          onChange={(e) => setControlledAuth({ ...controlledAuth, username: e.target.value })} />
+          onChange={(e) => onChangeUsername(e)} />
         <Input value={controlledAuth.password} placeholder='password' type='password'
-          onChange={(e) => setControlledAuth({ ...controlledAuth, password: e.target.value })} />
+          onChange={(e) => onChangePassword(e)} />
       </Grid>
       <Grid item>
         <Button onClick={onClickSubmit}>Submit</Button>

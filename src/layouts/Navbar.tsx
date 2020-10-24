@@ -32,8 +32,8 @@ function Navbar() {
             container spacing={3}>
             <>
               <NavItemWrapper text='Content' path={paths.cms} />
-              <NavItemWrapper text='Crystals Gallery' path={paths.crystalsGallery} />
               <NavItemWrapper text='Parallax Canvas' path={paths.parallaxCanvas} />
+              <NavItemWrapper text='Crystals Gallery' path={paths.crystalsGallery} />
             </>
           </Grid>
         </Container>
