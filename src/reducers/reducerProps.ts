@@ -40,7 +40,7 @@ export const initialPortfolioContent: portfolioContentT = {
   moreTech: [pfcDefaults.moreTech],
   photoshop: [pfcDefaults.photoshop],
   bio: pfcDefaults.bio,
-  contacts: pfcDefaults.contacts
+  contacts: pfcDefaults.contacts,
 }
 
 export interface portfolioContentT {

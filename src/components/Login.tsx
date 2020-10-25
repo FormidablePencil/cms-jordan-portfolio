@@ -9,12 +9,8 @@ const Login = ({ isLoggedIn, loggedIn, controlledAuth }) => {
   const dispatch = useDispatch()
   // eslint-disable-next-line 
 
-  const onClickSubmit = async () => {
-    const fetchedContent = await fetchContentData(controlledAuth)
-    if (fetchedContent)
-      if (fetchedContent.data)
-        dispatch({ type: FETCHED_CMS_PORTFOLIO_DATA, payload: fetchedContent.data })
-  }
+  const onClickSubmit = () =>
+    dispatch(fetchContentData(controlledAuth))
 
   const onChangeUsername = (e) =>
     dispatch({ type: UPDATE_AUTH_USERNAME, payload: e.target.value })

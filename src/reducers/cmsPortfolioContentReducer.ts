@@ -6,6 +6,7 @@ export default (state = initialPortfolioContent, { type, payload }) => {
   switch (type) {
 
     case FETCHED_CMS_PORTFOLIO_DATA:
+      console.log(payload, 'payloadpayload');
       return payload
 
     case ON_CHANGE_VALUE:

@@ -9,10 +9,11 @@ import { READY_TO_SAVE } from '../actions/constants';
 function FabSave() {
   const classes = useStyles();
   const { cmsPortfolioContent, controlledAuth, readyToSaveToDb } = useSelector((state: rootT) => state)
-  const rawCrytal = useGetRawCrystalData()
+  const rawCrystalData: any = useGetRawCrystalData()
   const renderCount = useRef(0)
   const dispatch = useDispatch()
-console.log(readyToSaveToDb, 'readyToSaveToDb');
+
+
   useEffect(() => {
     if (renderCount.current === 1)  //when page loads the state won't be toggled
       dispatch({ type: READY_TO_SAVE, payload: true })
@@ -22,9 +23,15 @@ console.log(readyToSaveToDb, 'readyToSaveToDb');
 
 
   const onClickSubmit = async () => {
-    const updated = await updateContent(cmsPortfolioContent, rawCrytal, controlledAuth)
-    if (updated)
-      dispatch({ type: READY_TO_SAVE, payload: false })
+    if (readyToSaveToDb) {
+      const updated = await updateContent(
+        cmsPortfolioContent,
+        rawCrystalData.rawCrystalData,
+        controlledAuth
+      )
+      if (updated)
+        dispatch({ type: READY_TO_SAVE, payload: false })
+    }
     else
       dispatch({ type: READY_TO_SAVE, payload: 'err' })
   }
