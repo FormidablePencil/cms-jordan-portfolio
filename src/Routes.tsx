@@ -1,4 +1,4 @@
-import { CrystalParallax, CrystalGallery } from 'parallax-effect-crystals'
+import { CrystalParallax } from 'parallax-effect-crystals'
 import React from 'react'
 import Cms from './Cms'
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -11,7 +11,7 @@ import { rootT } from './store';
 export enum paths {
   cms = '/',
   parallaxCanvas = '/parallax-canvas',
-  crystalsGallery = '/crystals-gallery',
+  // crystalsGallery = '/crystals-gallery',
 }
 
 
@@ -20,8 +20,10 @@ function Routes() {
   const { rawCrystalData } = useSelector((state: rootT) => state)
   console.log(rawCrystalData, 'rawCrystalDatarawCrystalDatarawCrystalDatarawCrystalData');
 
-  const crystalPropsChanged = () =>
+  const crystalPropsChanged = () => {
+    console.log('hitttt');
     dispatch({ type: READY_TO_SAVE, payload: true })
+  }
 
   return (
     <BrowserRouter>
@@ -39,9 +41,9 @@ function Routes() {
         />
       </Route>
 
-      <Route exact path={paths.crystalsGallery}>
+      {/* <Route exact path={paths.crystalsGallery}>
         <CrystalGallery />
-      </Route>
+      </Route> */}
 
 
       <FabSave />

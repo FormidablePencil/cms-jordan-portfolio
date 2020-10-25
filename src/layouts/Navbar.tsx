@@ -33,7 +33,7 @@ function Navbar() {
             <>
               <NavItemWrapper text='Content' path={paths.cms} />
               <NavItemWrapper text='Parallax Canvas' path={paths.parallaxCanvas} />
-              <NavItemWrapper text='Crystals Gallery' path={paths.crystalsGallery} />
+              {/* <NavItemWrapper text='Crystals Gallery' path={paths.crystalsGallery} /> */}
             </>
           </Grid>
         </Container>

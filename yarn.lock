@@ -7739,7 +7739,7 @@ pako@~1.0.5:
 
 "parallax-effect-crystals@https://github.com/FormidablePencil/parallax-effect-crystals":
   version "1.0.0"
-  resolved "https://github.com/FormidablePencil/parallax-effect-crystals#8999b7e2b22b7681e3fc082bd50b7ca325e3caeb"
+  resolved "https://github.com/FormidablePencil/parallax-effect-crystals#65be71f1c7440701962a2835b06f54da5ce62c67"
   dependencies:
     react-device-detect "^1.14.0"
     uuid "^8.3.1"
