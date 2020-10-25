@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Grid, Input, Button, makeStyles } from '@material-ui/core';
 import { fetchContentData } from '../actions/fetching';
 import { useDispatch } from 'react-redux';
-import { FETCHED_CMS_PORTFOLIO_DATA, UPDATE_AUTH_PASSWORD, UPDATE_AUTH_USERNAME } from '../actions/constants';
+import { UPDATE_AUTH_PASSWORD, UPDATE_AUTH_USERNAME } from '../actions/constants';
 
 const Login = ({ isLoggedIn, loggedIn, controlledAuth }) => {
   const classes = useStyles();
