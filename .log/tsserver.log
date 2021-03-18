@@ -1,0 +1,72 @@
+Info 0    [7:22:12.40] Starting TS Server
+Info 1    [7:22:12.41] Version: 3.7.5
+Info 2    [7:22:12.41] Arguments: /usr/local/bin/node /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/node_modules/.bin/tsserver --logFile /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/.log/tsserver.log --logVerbosity info --cancellationPipeName /private/var/folders/gv/nz486zr944j7vtjv3m62wzp40000gn/T/09771aa7d5c48eff9e37e4bfdc04b67f/tscancellation*
+Info 3    [7:22:12.41] Platform: darwin NodeVersion: 14 CaseSensitive: false
+Info 4    [7:22:12.303] Structure before ensureProjectForOpenFiles:
+Info 5    [7:22:12.303] Structure after ensureProjectForOpenFiles:
+Info 6    [7:22:12.303] got projects updated in background, updating diagnostics for 
+Info 7    [7:22:13.805] Search path: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src
+Info 8    [7:22:13.806] For info: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/App.tsx :: Config file name: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json
+Info 9    [7:22:13.807] Opened configuration file /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json
+Info 10   [7:22:13.831] Config: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json : {
+ "rootNames": [
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/App.test.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/App.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/Cms.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/Routes.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/index.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/react-app-env.d.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/serviceWorker.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/setupTests.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/store.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/actions/constants.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/actions/fetching.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/BioAndContacts.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/CmsTextFields.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/ContentSection.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/DeleteBtn.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/FabSave.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/Login.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/SectionWrapper.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/components/TechStackCms.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/constants/parallaxCrystalProps.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/layouts/Navbar.tsx",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/logic/cmsPortfolioModifiers.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/reducers/cmsPortfolioContentReducer.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/reducers/controlledAuthReducer.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/reducers/rawCrystalDataReducer.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/reducers/readyToSaveToDbReducer.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/reducers/reducerProps.ts",
+  "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/styles/customMaterialUiComp.ts"
+ ],
+ "options": {
+  "target": 1,
+  "lib": [
+   "lib.dom.d.ts",
+   "lib.dom.iterable.d.ts",
+   "lib.esnext.d.ts"
+  ],
+  "allowJs": true,
+  "skipLibCheck": true,
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  "strict": false,
+  "forceConsistentCasingInFileNames": true,
+  "module": 99,
+  "moduleResolution": 2,
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "noEmit": true,
+  "jsx": 2,
+  "configFilePath": "/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json"
+ }
+}
+Info 11   [7:22:13.877] Starting updateGraphWorker: Project: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json
+Info 12   [7:22:16.902] Finishing updateGraphWorker: Project: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json Version: 1 structureChanged: true Elapsed: 3025ms
+Info 13   [7:22:16.902] Project '/Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json' (Configured) 
+Info 14   [7:22:16.902] 	Files (519)
+
+Info 15   [7:22:16.902] -----------------------------------------------
+Info 16   [7:22:16.921] Search path: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src
+Info 17   [7:22:16.921] For info: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/src/Cms.tsx :: Config file name: /Users/dennisaleksandrov/Documents/code/websites/cms-jordan-portfolio/tsconfig.json
+Info 18   [7:22:21.992] Format host information updated

@@ -32,6 +32,7 @@ function Navbar() {
             container spacing={3}>
             <>
               <NavItemWrapper text='Content' path={paths.cms} />
+              <NavItemWrapper text='Home' path={paths.home} />
               <NavItemWrapper text='Parallax Canvas' path={paths.parallaxCanvas} />
               {/* <NavItemWrapper text='Crystals Gallery' path={paths.crystalsGallery} /> */}
             </>
