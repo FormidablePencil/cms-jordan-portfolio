@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { portfolioContentT } from './reducers/reducerProps'
+import { portfolioContentT } from "cinema-portfolio-proj-types";
 import cmsPortfolioContentReducer from './reducers/cmsPortfolioContentReducer'
 import controlledAuthReducer, { controlledAuthT } from './reducers/controlledAuthReducer'
 import readyToSaveToDbReducer from './reducers/readyToSaveToDbReducer'
