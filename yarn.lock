@@ -3128,8 +3128,8 @@ ci-info@^2.0.0:
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
 "cinema-portfolio-proj-types@https://github.com/FormidablePencil/cinema-portfolio-proj-types":
-  version "0.0.0"
-  resolved "https://github.com/FormidablePencil/cinema-portfolio-proj-types#ffa8865cabef10c2f646c248d5deeb2d662898bc"
+  version "0.0.1"
+  resolved "https://github.com/FormidablePencil/cinema-portfolio-proj-types#c23bb880edf3175c54dfdb6109ef42d154e1f436"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"

@@ -1,4 +1,4 @@
-import { pfcDefaults } from "../reducers/reducerProps"
+import { pfcDefaults } from "cinema-portfolio-proj-types"
 
 const cmsPortfolioModifiers = {
   onChangeValue: (payload, state) => {

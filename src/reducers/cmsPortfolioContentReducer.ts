@@ -5,7 +5,6 @@ import {
   FETCHED_CMS_PORTFOLIO_DATA,
 } from "../actions/constants";
 import { portfolioContentDefaultData } from "cinema-portfolio-proj-types";
-import {} from "cinema-portfolio-proj-types";
 import cmsPortfolioModifiers from "../logic/cmsPortfolioModifiers";
 
 export default (state = portfolioContentDefaultData, { type, payload }) => {
