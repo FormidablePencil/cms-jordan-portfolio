@@ -1,20 +1,13 @@
-import { CrystalParallax } from "parallax-effect-crystals";
+import { CrystalParallax, CrystalParallaxProvider } from "parallax-effect-crystals";
 import React from "react";
-import Cms from "./Cms";
-import { BrowserRouter, Route } from "react-router-dom";
-import Navbar from "./layouts/Navbar";
-import FabSave from "./components/FabSave";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  READY_TO_SAVE,
-  FETCHED_CRYSTAL_DATA,
-  FETCHED_CRYSTAL_DATA_FOR_HOME,
-  RESET_CRYSTAL_DATA_FOR_HOME,
-} from "./actions/constants";
-import { rootT } from "./store";
-import { makeStyles, Modal } from "@material-ui/core";
+import { BrowserRouter, Route } from "react-router-dom";
+import { FETCHED_CRYSTAL_DATA, FETCHED_CRYSTAL_DATA_FOR_HOME, READY_TO_SAVE } from "./actions/constants";
+import Cms from "./Cms";
+import FabSave from "./components/FabSave";
 import ResetButton from "./components/ResetButton";
-import { CrystalParallaxProvider } from "parallax-effect-crystals";
+import Navbar from "./layouts/Navbar";
+import { rootT } from "./store";
 
 export enum paths {
   cms = "/",
@@ -42,8 +35,6 @@ function Routes() {
     dispatch({ type: READY_TO_SAVE, payload: true });
   };
 
-  const crystalClickedOn = (crystalUUID) => console.log(crystalUUID);
-
   return (
     <BrowserRouter>
       <Navbar />
@@ -54,10 +45,7 @@ function Routes() {
         </Route>
 
         <Route exact path={paths.home}>
-          <CrystalParallaxProvider
-            crystalClickedOn={crystalClickedOn}
-            eventToFollow="mouse"
-          >
+          <CrystalParallaxProvider eventToFollow="mouse">
             <CrystalParallax
               onChange={crystalPropsChangedForHome}
               withGui={true}
@@ -67,10 +55,7 @@ function Routes() {
         </Route>
 
         <Route exact path={paths.parallaxCanvas}>
-          <CrystalParallaxProvider
-            crystalClickedOn={crystalClickedOn}
-            eventToFollow="scroll"
-          >
+          <CrystalParallaxProvider eventToFollow="scroll">
             <CrystalParallax
               onChange={crystalPropsChanged}
               withGui={true}

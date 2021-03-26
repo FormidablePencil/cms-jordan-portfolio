@@ -7808,7 +7808,7 @@ pako@~1.0.5:
 
 "parallax-effect-crystals@https://github.com/FormidablePencil/parallax-effect-crystals":
   version "1.0.0"
-  resolved "https://github.com/FormidablePencil/parallax-effect-crystals#5cfe74dd41a491879b98da7c2407b89e323c16e4"
+  resolved "https://github.com/FormidablePencil/parallax-effect-crystals#07f76860df8a2867f8d707b36fcc19981c21ac81"
   dependencies:
     react-device-detect "^1.14.0"
     react-spring "^8.0.27"
