@@ -6,16 +6,13 @@ import {
 
 //~ fetching to server
 export const fetchContentData = (credentials) => async (dispatch) => {
-  const res = await fetch(
-    "https://jordan-portfolio-server.herokuapp.com/contentdatalogin",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ credentials }),
-    }
-  );
+  const res = await fetch(process.env.REACT_APP_FETCH_LOGIN_FETCH_DATA, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ credentials }),
+  });
   console.log("hit");
 
   interface fetchedContentT {
@@ -49,20 +46,17 @@ export const updateContent = async (
   rawCrystalDataForHome,
   credentials
 ) => {
-  const res = await fetch(
-    "https://jordan-portfolio-server.herokuapp.com/updatecontent",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+  const res = await fetch(process.env.REACT_APP_FETCH_USERS_UPDATE_CONTENT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
 
-      body: JSON.stringify({
-        data: { cmsPortfolioContent, rawCrystalData, rawCrystalDataForHome },
-        credentials,
-      }),
-    }
-  );
+    body: JSON.stringify({
+      data: { cmsPortfolioContent, rawCrystalData, rawCrystalDataForHome },
+      credentials,
+    }),
+  });
   if (res.status === 200) return true;
 };
 //~~~~
