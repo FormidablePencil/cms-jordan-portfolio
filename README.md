@@ -11,7 +11,7 @@ parallax-effect-crystals package that I've created you can find here: https://gi
 - Material-Ui <img src="https://i.ibb.co/VQD5cY6/material-ui.png" width="20" title="">
 - Styled components <img src="https://i.ibb.co/GdtGT3Y/styled-Components.png" width="20" title="">
 
-Client repo code can be found here: https://github.com/FormidablePencil/cms-jordan-portfolio/
+Client repo code can be found here: https://github.com/FormidablePencil/cinema-portfolio/
 
 Client hosted on netlify: https://ideal-intent.netlify.app/
 
